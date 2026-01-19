@@ -1,0 +1,11 @@
+.header {
+    &__title h2 {
+        font-weight: bolder;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
