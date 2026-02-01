@@ -1,15 +1,27 @@
-import { useContext } from "react"
 import style from "./Button.module.scss"
-import { CountContext } from "../../App"
+import { useDispatch, useSelector } from "react-redux"
+import { addItem } from "../../features/order/orderSlice"
 
-function Button({price}) {
-    const {count, setCount} = useContext(CountContext)
-    
+function Button({
+    id, 
+    dough, 
+    size,
+    title,
+    price,
+    img
+}) {
+    const dispatch = useDispatch();
+
     return (
-        <div className={style.button} onClick={() => setCount(price + count)}>
+        <div className={style.button} onClick={() => 
+            dispatch(addItem({id, dough, size,title, price, img}))
+        }>
             + Добавить
         </div>
     )
 }
 
 export default Button
+
+// prev =>
+                

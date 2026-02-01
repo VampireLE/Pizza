@@ -1,7 +1,7 @@
 import ButtonBasket from "../ButtonBasket/ButtonBasket";
 import style from "./Header.module.scss";
 
-function Header({count}) {
+function Header() {
     return (
         <div className={style.header}>
             <div className={style.header__wrapper}>
@@ -15,7 +15,7 @@ function Header({count}) {
                     </div>
 
                     <div>
-                        <ButtonBasket count={count} />
+                        <ButtonBasket />
                     </div>
                 </div>
             </div>

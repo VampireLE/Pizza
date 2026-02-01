@@ -1,11 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Button from "../Button/Button"
 import Navigation from "../Navigation/Navigation";
 import style from "./Item.module.scss"
 import {CountContext}  from "../../App";
+import { useSelector } from "react-redux";
+import { addItem } from "../../features/order/orderSlice";
 
 function Item({item}) {
-    const {title, price, img} = item;
+    const {id, title, price, img, count} = item;
+    const [dough, setDough] = useState('тонкое');
+    const [size, setSize] = useState('26 см');
+    
+    const pizzas = useSelector(state => state.order.value)
+    console.log(pizzas)
 
     return (
         <div className={style.item}>
@@ -17,13 +24,19 @@ function Item({item}) {
                     {title}
                 </div>
                 <div className={style.item__nav}>
-                    <Navigation/>
+                    <Navigation dough={dough} setDough={setDough} size={size} setSize={setSize}/>
                 </div>
                 <div className={style.item__buy}>
                     <h3 className={style.buy__price}>
                         от {price} ₽
                     </h3>
-                    <Button price={price}/>
+                    <Button 
+                        id={id}
+                        dough={dough}
+                        size={size}
+                        title={title}
+                        price={price}
+                        img={img}/>
                 </div>
             </div>
         </div>
