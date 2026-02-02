@@ -132,13 +132,23 @@ function Content() {
     ]
 
     const {pizzas, setPizzas} = useContext(CountContext);
+    const [currentPage, setCurrentPage] = useState(1);
 
-    const start = 1;
-    let current = 1;
-    let end = Math.ceil(data.length / 8);
+    const a = [];
+
     
-    const pages = Array.from({length: end}, (_, i) => i + 1);
     
+    const start = (currentPage - 1) * 8;
+    let end = currentPage * 8;
+    const res = data.slice(start, end)
+    const pages = Array.from({length: Math.ceil(data.length / 8)}, (_, i) => i + 1);
+    
+    // for (let i = Math.max(2, currentPage - 1); i < Math.min(Math.ceil(data.length / 8)) - 1, currentPage + 1; i++) {
+    //     a.push(i);
+    // }
+
+
+    console.log(a)
     return (
         <div className={style.content}>
             <div className={style.content__title}>
@@ -146,30 +156,28 @@ function Content() {
             </div>
             <div className={style.content__body}>
                 {
-                    data.map((item, index) => {
-                        if (index < 8) {
+                    res.map((item, index) => {
                             return (
                                 <div key={index}>
                                     <Item item={item} />
                                 </div>
                             )
                         }
-                    }
                     )
                 }
             </div>
             <div className={style.navigation}>
-                <div className={style.back}></div>
+                <div className={style.back} onClick={() => setCurrentPage(prev => prev !== 1 ? prev - 1 : prev)}></div>
                 <div className={style.navigation__list}>
                     {
-                        pages.map((val) => (
-                            <div className={style.page}>
+                        pages.map((val, index) => (
+                            <div className={style.page} onClick={() => setCurrentPage(index + 1)}>
                                 {val}
                             </div>
                         ))
                     }
                 </div>
-                <div className={style.forward}></div>
+                <div className={style.forward} onClick={() => setCurrentPage(prev => prev !== Math.ceil(data.length / 8) ? prev + 1 : prev)}></div>
             </div>
         </div>
     )
