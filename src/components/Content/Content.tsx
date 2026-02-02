@@ -136,12 +136,9 @@ function Content() {
     const start = 1;
     let current = 1;
     let end = Math.ceil(data.length / 8);
-    const pages = [];
-    for(let i=start; i <= end; i++) {
-        pages.push(i)            
-    }
     
-    [1, ... , 8, 9 ... 16, 17]
+    const pages = Array.from({length: end}, (_, i) => i + 1);
+    
     return (
         <div className={style.content}>
             <div className={style.content__title}>

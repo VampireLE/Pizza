@@ -1,4 +1,5 @@
 import ButtonBasket from "../ButtonBasket/ButtonBasket";
+import Search from "../Search/Search";
 import style from "./Header.module.scss";
 
 function Header() {
@@ -12,6 +13,10 @@ function Header() {
                             <h2>REACT PIZZA</h2>
                             <span>самая вкусная пицца во вселенной</span>
                         </div>
+                    </div>
+
+                    <div>
+                        <Search/>
                     </div>
 
                     <div>

@@ -1,7 +1,13 @@
 .header {
     &__title h2 {
         font-weight: bolder;
+        color: #181818;
     }
+
+    &__title span {
+        color: #7b7b7b !important;
+    }
+
     &__inner {
         display: flex;
         flex-direction: row;
