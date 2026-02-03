@@ -15,7 +15,7 @@ function Content() {
     // const {pizzas, setPizzas} = useContext(CountContext)
     // console.log(pizzas)
     const baskets = useSelector(state => state.order.value)
-    console.log(baskets)
+    // console.log(baskets)
     return (
         <>
             <div>
@@ -42,7 +42,7 @@ function Content() {
                                         <img src={pizzaIcon} alt="" />
                                     </div>
                                     <div className={style.header__title}>
-                                        <div><h2>REACT PIZZA</h2></div>
+                                        <div><p>REACT PIZZA</p></div>
                                         <div>
                                             <span>Самая реактивная пицца</span>
                                         </div>

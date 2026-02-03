@@ -6,7 +6,6 @@ function Basket() {
     return (
         <div className={style.layout}>
             <div className={style.layout__wrapper}>
-                {/* <Header/> */}
                 <Content/>
             </div>   
         </div>

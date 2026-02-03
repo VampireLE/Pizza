@@ -11,8 +11,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
-    height: 90vh;
-    width: 1000px;
+    height: 580px;
+    width: 1340px;
 }
 
 .content__btn {
@@ -51,8 +51,11 @@ body {
 }
 
 .header {
+    margin-left: 30px;
     display: flex;
+    align-items: center;
     border-bottom: 1px solid #f6f6f6;
+    height: 100px;
 }
 
 .header > div {
@@ -63,7 +66,20 @@ body {
 }
 
 .section {
-    margin-top: 10px;
+    &__wrapper {
+        display: flex;
+        gap: 430px;
+        justify-content: space-around;
+    }
+
+    &__header {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+
+    margin-top: 50px;
 
     &__wrapper {
         display: flex;
@@ -181,21 +197,25 @@ body {
 .info {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 450px;
+    justify-content: space-around;
 }
 
 
 .choose {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 50px;
 
     &__back {
+        width: 150px;
         display: flex;
-        // position: relative;
-        // border: 1px solid black;
-        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        color: #CACACA;
+        border: 1px solid #CACACA;
+        border-radius: 50px;
         cursor: pointer;
     }
 
@@ -223,5 +243,9 @@ body {
         border-radius: 50%;
         // background-color: red;
         // transform: rotate(45deg);
+    }
+
+    &__buy-now {
+        background-color: orange;
     }
 }
