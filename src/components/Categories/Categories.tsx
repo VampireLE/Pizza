@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import style from "./Catigories.module.scss"
 
-function Categories({setChoseDropdownMenu}) {
-    const [categori, setCategori] = useState(1);
+function Categories({setChoseDropdownMenu, categori, setCategori}) {
     const [dropDown, setDropDown] = useState(false);
     const dropDownStyle = useRef(null);
 

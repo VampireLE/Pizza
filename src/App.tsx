@@ -25,7 +25,8 @@ function App() {
             title: 'Чизбургер-пицца', 
             price: 395,
             count: 0,
-            popularity: 8.1
+            popularity: 8.1,
+            categori: [1, 2]
         },
         {
             id: 2,
@@ -33,7 +34,8 @@ function App() {
             title: 'Сырная', 
             price: 450,
             count: 0,
-            popularity: 2.0
+            popularity: 2.0,
+            categori: [1]
         },
         {
             id: 3,
@@ -41,7 +43,8 @@ function App() {
             title: 'Креветки по-азиатски', 
             price: 290,
             count: 0,
-            popularity: 3.4
+            popularity: 3.4,
+            categori: [1, 4]
         },
         {
             id: 4,
@@ -49,7 +52,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 9.9
+            popularity: 9.9,
+            categori: [1, 3]
         },
         {
             id: 5,
@@ -57,7 +61,8 @@ function App() {
             title: 'Чизбургер-пицца', 
             price: 395,
             count: 0,
-            popularity: 5.0
+            popularity: 5.0,
+            categori: [2, 3]
         },
         {
             id: 6,
@@ -65,7 +70,8 @@ function App() {
             title: 'Сырная', 
             price: 450,
             count: 0,
-            popularity: 1.1
+            popularity: 1.1,
+            categori: [6, 3]
         },
         {
             id: 7,
@@ -73,7 +79,8 @@ function App() {
             title: 'Креветки по-азиатски', 
             price: 290,
             count: 0,
-            popularity: 8.0
+            popularity: 8.0,
+            categori: [2, 4]
         },
         {
             id: 8,
@@ -81,7 +88,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 8.1
+            popularity: 8.1,
+            categori: [4, 5]
         },
         {
             id: 9,
@@ -89,7 +97,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 2.1
+            popularity: 2.1,
+            categori: [3]
         },
         {
             id: 10,
@@ -97,7 +106,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 4.1
+            popularity: 4.1,
+            categori: [2]
         },
         {
             id: 11,
@@ -105,7 +115,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 3.1
+            popularity: 3.1,
+            categori: [2, 4]
         },
         {
             id: 12,
@@ -113,7 +124,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 8.5
+            popularity: 8.5,
+            categori: [1, 2]
         },
         {
             id: 13,
@@ -121,7 +133,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 2.2
+            popularity: 2.2,
+            categori: [1, 3]
         },
         {
             id: 14,
@@ -129,7 +142,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 3.3
+            popularity: 3.3,
+            categori: [1, 2]
         },
         {
             id: 15,
@@ -137,7 +151,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 0.5
+            popularity: 0.5,
+            categori: [1, 6, 5]
         },
         {
             id: 16,
@@ -145,7 +160,8 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 1.1
+            popularity: 1.1,
+            categori: [1, 4]
         },
         {
             id: 17,
@@ -153,26 +169,31 @@ function App() {
             title: 'Сырный цыпленок', 
             price: 385,
             count: 0,
-            popularity: 8.9
+            popularity: 8.9,
+            categori: [1]
         },
     ]
 
   const [pizzas, setPizzas] = useState([]);
   const [choseDropdownMenu, setChoseDropdownMenu] = useState(0);
 
+  const [categori, setCategori] = useState(1);
+
+  const filterByCategori = () => {
+    return data.filter((val) => categori !== 1 ?  val.categori.includes(categori) : val)
+  }
+
   const filterByPrice = () => {
-    return data.sort((a, b) => a.price - b.price)
+    return filterByCategori().sort((a, b) => a.price - b.price)
   }
 
   const filterByPopularity = () => {
-    return data.sort((a, b) => a.popularity - b.popularity)
+    return filterByCategori().sort((a, b) => a.popularity - b.popularity)
   }
 
   const filterByText = () => {
-    return data.sort((a, b) => a.title.localeCompare(b.title))
+    return filterByCategori().sort((a, b) => a.title.localeCompare(b.title))
   }
-
-  filterByText()
 
   const contentData = () => {
     switch (choseDropdownMenu) {
@@ -180,8 +201,10 @@ function App() {
             return filterByPopularity();
         case 2:
             return filterByPrice();
+        case 3:
+            return filterByText();
         default:
-            return data;
+            return filterByCategori();
     }
   }
 
@@ -190,8 +213,12 @@ function App() {
         <div className={style.layout__wrapper}>
           <CountContext.Provider value={{pizzas, setPizzas}}>
               <Header/>
-              <Categories setChoseDropdownMenu={setChoseDropdownMenu}/>
-              <Content 
+              <Categories 
+                setChoseDropdownMenu={setChoseDropdownMenu} 
+                categori={categori}
+                setCategori={setCategori}
+                />
+              <Content
                 data={contentData()}
                 />
           </CountContext.Provider>

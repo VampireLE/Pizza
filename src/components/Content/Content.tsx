@@ -8,13 +8,13 @@ import { useContext, useState } from "react";
 import { CountContext } from "../../App";
 
 function Content({data}) {
-
+    
     const {pizzas, setPizzas} = useContext(CountContext);
     const [currentPage, setCurrentPage] = useState(1);
 
     const a = [];
 
-    console.log(data)
+    // console.log(data)
     
     const start = (currentPage - 1) * 8;
     let end = currentPage * 8;
@@ -25,7 +25,7 @@ function Content({data}) {
     //     a.push(i);
     // }
 
-
+    
     // console.log(a)
 
 
