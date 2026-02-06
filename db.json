@@ -1,0 +1,123 @@
+{
+  "pizzas": [
+    {
+      "id": 1,
+      "img": "CheeseburgerPizza",
+      "title": "Чизбургер-пицца",
+      "price": 395,
+      "count": 0
+    },
+    {
+      "id": 2,
+      "img": "Cheers",
+      "title": "Сырная",
+      "price": 450,
+      "count": 0
+    },
+    {
+      "id": 3,
+      "img": "AsianStyleShrimp",
+      "title": "Креветки по-азиатски",
+      "price": 290,
+      "count": 0
+    },
+    {
+      "id": 4,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 5,
+      "img": "CheeseburgerPizza",
+      "title": "Чизбургер-пицца",
+      "price": 395,
+      "count": 0
+    },
+    {
+      "id": 6,
+      "img": "Cheers",
+      "title": "Сырная",
+      "price": 450,
+      "count": 0
+    },
+    {
+      "id": 7,
+      "img": "AsianStyleShrimp",
+      "title": "Креветки по-азиатски",
+      "price": 290,
+      "count": 0
+    },
+    {
+      "id": 8,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 9,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 10,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 11,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 12,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 13,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 14,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 15,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 16,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    },
+    {
+      "id": 17,
+      "img": "CheeseChicken",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "count": 0
+    }
+  ]
+}

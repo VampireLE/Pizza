@@ -7,136 +7,14 @@ import CheeseChicken from "./../../assets/Сырный цыпленок.png"
 import { useContext, useState } from "react";
 import { CountContext } from "../../App";
 
-function Content() {
-
-    const data = [
-        {
-            id: 1,
-            img: CheeseburgerPizza, 
-            title: 'Чизбургер-пицца', 
-            price: 395,
-            count: 0
-        },
-        {
-            id: 2,
-            img: Cheers, 
-            title: 'Сырная', 
-            price: 450,
-            count: 0
-        },
-        {
-            id: 3,
-            img: AsianStyleShrimp, 
-            title: 'Креветки по-азиатски', 
-            price: 290,
-            count: 0
-        },
-        {
-            id: 4,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 5,
-            img: CheeseburgerPizza, 
-            title: 'Чизбургер-пицца', 
-            price: 395,
-            count: 0
-        },
-        {
-            id: 6,
-            img: Cheers, 
-            title: 'Сырная', 
-            price: 450,
-            count: 0
-        },
-        {
-            id: 7,
-            img: AsianStyleShrimp, 
-            title: 'Креветки по-азиатски', 
-            price: 290,
-            count: 0
-        },
-        {
-            id: 8,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 9,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 10,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 11,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 12,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 13,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 14,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 15,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 16,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-        {
-            id: 17,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
-            price: 385,
-            count: 0
-        },
-    ]
+function Content({data}) {
 
     const {pizzas, setPizzas} = useContext(CountContext);
     const [currentPage, setCurrentPage] = useState(1);
 
     const a = [];
 
-    
+    console.log(data)
     
     const start = (currentPage - 1) * 8;
     let end = currentPage * 8;
@@ -148,7 +26,10 @@ function Content() {
     // }
 
 
-    console.log(a)
+    // console.log(a)
+
+
+
     return (
         <div className={style.content}>
             <div className={style.content__title}>

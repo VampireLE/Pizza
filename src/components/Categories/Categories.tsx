@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import style from "./Catigories.module.scss"
 
-function Categories() {
-
+function Categories({setChoseDropdownMenu}) {
     const [categori, setCategori] = useState(1);
     const [dropDown, setDropDown] = useState(false);
     const dropDownStyle = useRef(null);
 
     useEffect(() => {
-        
         const outDropDown = (event) => {
             if (event.target !== dropDownStyle.current) {
                 setDropDown(false)
@@ -37,9 +35,9 @@ function Categories() {
                     <div  className={style.search__sort} onClick={() => setDropDown(true)}>
                         <p>Сортировка по: <span ref={dropDownStyle}>популярности</span></p>
                         <div style={dropDown ? {display: 'block'} : {}} className={style.sort__dropdown}>
-                            <div>по пулярности</div>
-                            <div>по цене</div>
-                            <div>по алфавиту</div>
+                            <div onClick={() => setChoseDropdownMenu(1)}>по пулярности</div>
+                            <div onClick={() => setChoseDropdownMenu(2)}>по цене</div>
+                            <div onClick={() => setChoseDropdownMenu(3)}>по алфавиту</div>
                         </div>
                     </div>
                 </div>

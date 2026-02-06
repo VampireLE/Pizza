@@ -1,9 +1,9 @@
 import style from "./Search.module.scss"
 
-function Search() {
+function Search({setValue}) {
     return (
         <>
-            <input placeholder="Поиск пиццы..."/>
+            <input placeholder="Поиск пиццы..." onChange={(el) => setValue(el.target.value)}/>
         </>
     )
 }

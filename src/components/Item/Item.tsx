@@ -12,7 +12,7 @@ function Item({item}) {
     const [size, setSize] = useState('26 см');
     
     const pizzas = useSelector(state => state.order.value)
-    console.log(pizzas)
+    // console.log(pizzas)
 
     return (
         <div className={style.item}>
