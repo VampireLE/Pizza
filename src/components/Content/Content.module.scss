@@ -7,18 +7,17 @@
     padding-bottom: 80px;
     margin-top: 50px;
     &__body {
+        width: 100%;
         display: grid;
         align-items: center;
-        justify-content: center;
         justify-items: center;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         grid-row-gap: 30px;
     }
 }
 
 
 .page {
-    border: 1px solid black;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -27,13 +26,26 @@
     cursor: pointer;
 }
 
+.page:hover {
+    background-color: rgba(168, 167, 168, 0.248);
+}
+
+.page--active {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background-color: rgb(168, 167, 168);
+}
+
 .back {
     position: relative;
     cursor: pointer;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid black;
 }
 
 .back::before {
@@ -42,7 +54,7 @@
     width: 10px;
     height: 3px;
     border-radius: 5px;
-    top: 17px;
+    top: 20px;
     right: 10px;
     background-color: black;
     transform: rotate(35deg);
@@ -53,7 +65,7 @@
     position: absolute;
     width: 10px;
     height: 3px;
-    top: 12px;
+    top: 15px;
     right: 10px;
     background-color: black;
     border-radius: 5px;
@@ -67,7 +79,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid black;
+    // border: 1px solid black;
 }
 
 
@@ -77,7 +89,7 @@
     width: 10px;
     height: 3px;
     border-radius: 5px;
-    top: 17px;
+    top: 20px;
     right: 10px;
     background-color: black;
     transform: rotate(-35deg);
@@ -88,7 +100,7 @@
     position: absolute;
     width: 10px;
     height: 3px;
-    top: 12px;
+    top: 15px;
     right: 10px;
     background-color: black;
     border-radius: 5px;

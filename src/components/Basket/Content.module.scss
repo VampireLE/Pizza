@@ -1,9 +1,3 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .content {
     text-align: center;
     border-radius: 30px;
@@ -11,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
-    height: 580px;
+    height:880px;
     width: 1340px;
 }
 
@@ -56,16 +50,52 @@ body {
     align-items: center;
     border-bottom: 1px solid #f6f6f6;
     height: 100px;
+    gap: 20px;
+    padding-bottom: 20px;
+
+    &__icon {
+        padding-top: 30px;
+    }
+
+    &__title {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-.header > div {
+.header__name {
+    font-size: 24px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.header__subtitle {
+    font-size: 16px;
+    color: #7B7B7B;
+}
+
+// .header > div {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.section__summary {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // height: 100%;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 30px;
 }
 
 .section {
+    height: 100%;
     &__wrapper {
         display: flex;
         gap: 430px;
@@ -88,6 +118,9 @@ body {
 
 
 .section__list {
+    margin-top: 30px;
+    height: 400px;
+    overflow-y: auto;
 
 }
 
@@ -249,6 +282,10 @@ body {
         height: 30px;
         padding: 10px;
         border-radius: 30px;
-        background-color: orange;
+        background-color: #FE5F1E;
+        color: #ffff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
     }
 }

@@ -52,7 +52,7 @@ function Content({data}) {
                 <div className={style.navigation__list}>
                     {
                         pages.map((val, index) => (
-                            <div className={style.page} onClick={() => setCurrentPage(index + 1)}>
+                            <div className={currentPage === index +1 ? style['page--active']: style.page} onClick={() => setCurrentPage(index + 1)}>
                                 {val}
                             </div>
                         ))

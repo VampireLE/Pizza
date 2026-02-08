@@ -5,7 +5,7 @@ import style from "./Header.module.scss";
 import { useSelector } from "react-redux";
 import { CountContext } from "../../App";
 
-function Header() {
+function Header({setValue}) {
 
     const data = [
         {
@@ -113,11 +113,9 @@ function Header() {
     ]
 
 
-    const [value, setValue] = useState('')
+    
     // const {pizzas, setPizzas} = useContext(CountContext);
-    const dataFilter = () => {
-        return data.filter((el) => (el.title.toLowerCase().includes(value.toLowerCase())))
-    }
+    
 
     // console.log(dataFilter())
     return (

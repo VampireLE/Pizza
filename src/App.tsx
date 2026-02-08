@@ -5,11 +5,10 @@ import Header from './components/Header/Header'
 import Navigation from './components/Navigation/Navigation'
 import Categories from './components/Categories/Categories'
 import { Provider, useDispatch, useSelector } from 'react-redux'
-// import Search from './components/Search/Search'
 
 import CheeseburgerPizza from "./assets/Чизбургер-пицца.png";
 import Cheers from "./assets/Сырная.png";
-import AsianStyleShrimp from "./assets/Креветки по-азиатски.png"; 
+import AsianStyleShrimp from "./assets/Креветки по-азиатски.png";
 import CheeseChicken from "./assets/Сырный цыпленок.png"
 
 
@@ -17,12 +16,12 @@ import CheeseChicken from "./assets/Сырный цыпленок.png"
 export const CountContext = createContext({});
 
 function App() {
-    
+
     const data = [
         {
             id: 1,
-            img: CheeseburgerPizza, 
-            title: 'Чизбургер-пицца', 
+            img: CheeseburgerPizza,
+            title: 'Чизбургер-пицца',
             price: 395,
             count: 0,
             popularity: 8.1,
@@ -30,8 +29,8 @@ function App() {
         },
         {
             id: 2,
-            img: Cheers, 
-            title: 'Сырная', 
+            img: Cheers,
+            title: 'Сырная',
             price: 450,
             count: 0,
             popularity: 2.0,
@@ -39,8 +38,8 @@ function App() {
         },
         {
             id: 3,
-            img: AsianStyleShrimp, 
-            title: 'Креветки по-азиатски', 
+            img: AsianStyleShrimp,
+            title: 'Креветки по-азиатски',
             price: 290,
             count: 0,
             popularity: 3.4,
@@ -48,8 +47,8 @@ function App() {
         },
         {
             id: 4,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 9.9,
@@ -57,8 +56,8 @@ function App() {
         },
         {
             id: 5,
-            img: CheeseburgerPizza, 
-            title: 'Чизбургер-пицца', 
+            img: CheeseburgerPizza,
+            title: 'Чизбургер-пицца',
             price: 395,
             count: 0,
             popularity: 5.0,
@@ -66,8 +65,8 @@ function App() {
         },
         {
             id: 6,
-            img: Cheers, 
-            title: 'Сырная', 
+            img: Cheers,
+            title: 'Сырная',
             price: 450,
             count: 0,
             popularity: 1.1,
@@ -75,8 +74,8 @@ function App() {
         },
         {
             id: 7,
-            img: AsianStyleShrimp, 
-            title: 'Креветки по-азиатски', 
+            img: AsianStyleShrimp,
+            title: 'Креветки по-азиатски',
             price: 290,
             count: 0,
             popularity: 8.0,
@@ -84,8 +83,8 @@ function App() {
         },
         {
             id: 8,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 8.1,
@@ -93,8 +92,8 @@ function App() {
         },
         {
             id: 9,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 2.1,
@@ -102,8 +101,8 @@ function App() {
         },
         {
             id: 10,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 4.1,
@@ -111,8 +110,8 @@ function App() {
         },
         {
             id: 11,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 3.1,
@@ -120,8 +119,8 @@ function App() {
         },
         {
             id: 12,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 8.5,
@@ -129,8 +128,8 @@ function App() {
         },
         {
             id: 13,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 2.2,
@@ -138,8 +137,8 @@ function App() {
         },
         {
             id: 14,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 3.3,
@@ -147,8 +146,8 @@ function App() {
         },
         {
             id: 15,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 0.5,
@@ -156,8 +155,8 @@ function App() {
         },
         {
             id: 16,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 1.1,
@@ -165,8 +164,8 @@ function App() {
         },
         {
             id: 17,
-            img: CheeseChicken, 
-            title: 'Сырный цыпленок', 
+            img: CheeseChicken,
+            title: 'Сырный цыпленок',
             price: 385,
             count: 0,
             popularity: 8.9,
@@ -174,57 +173,62 @@ function App() {
         },
     ]
 
-  const [pizzas, setPizzas] = useState([]);
-  const [choseDropdownMenu, setChoseDropdownMenu] = useState(0);
+    const [pizzas, setPizzas] = useState([]);
+    const [choseDropdownMenu, setChoseDropdownMenu] = useState(0);
+    const [value, setValue] = useState('')
 
-  const [categori, setCategori] = useState(1);
+    const [categori, setCategori] = useState(1);
 
-  const filterByCategori = () => {
-    return data.filter((val) => categori !== 1 ?  val.categori.includes(categori) : val)
-  }
-
-  const filterByPrice = () => {
-    return filterByCategori().sort((a, b) => a.price - b.price)
-  }
-
-  const filterByPopularity = () => {
-    return filterByCategori().sort((a, b) => a.popularity - b.popularity)
-  }
-
-  const filterByText = () => {
-    return filterByCategori().sort((a, b) => a.title.localeCompare(b.title))
-  }
-
-  const contentData = () => {
-    switch (choseDropdownMenu) {
-        case 1:
-            return filterByPopularity();
-        case 2:
-            return filterByPrice();
-        case 3:
-            return filterByText();
-        default:
-            return filterByCategori();
+    const filterByCategori = () => {
+        return data.filter((val) => categori !== 1 ? val.categori.includes(categori) : val)
     }
-  }
 
-  return (
-      <div className={style.layout}>
-        <div className={style.layout__wrapper}>
-          <CountContext.Provider value={{pizzas, setPizzas}}>
-              <Header/>
-              <Categories 
-                setChoseDropdownMenu={setChoseDropdownMenu} 
-                categori={categori}
-                setCategori={setCategori}
-                />
-              <Content
-                data={contentData()}
-                />
-          </CountContext.Provider>
+    const filterByPrice = () => {
+        return filterByCategori().sort((a, b) => a.price - b.price)
+    }
+
+    const filterByPopularity = () => {
+        return filterByCategori().sort((a, b) => a.popularity - b.popularity)
+    }
+
+    const filterByText = () => {
+        return filterByCategori().sort((a, b) => a.title.localeCompare(b.title))
+    }
+
+    const filterBySearchInput = (filteredData) => {
+        return filteredData.filter((el) => (el.title.toLowerCase().includes(value.toLowerCase())))
+    }
+
+    const contentData = () => {
+        switch (choseDropdownMenu) {
+            case 1:
+                return value.length === 0 ? filterByPopularity() : filterBySearchInput(filterByPopularity());
+            case 2:
+                return value.length === 0 ? filterByPrice() : filterBySearchInput(filterByPrice());
+            case 3:
+                return value.length === 0 ? filterByText() : filterBySearchInput(filterByText());
+            default:
+                return value.length === 0 ? filterByCategori() : filterBySearchInput(filterByCategori());
+        }
+    }
+
+    return (
+        <div className={style.layout}>
+            <div className={style.layout__wrapper}>
+                <CountContext.Provider value={{ pizzas, setPizzas }}>
+                    <Header setValue={setValue} />
+                    <Categories
+                        setChoseDropdownMenu={setChoseDropdownMenu}
+                        categori={categori}
+                        setCategori={setCategori}
+                    />
+                    <Content
+                        data={contentData()}
+                    />
+                </CountContext.Provider>
+            </div>
         </div>
-      </div>
-  )
+    )
 }
 
 export default App

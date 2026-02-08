@@ -42,8 +42,10 @@ function Content() {
                                         <img src={pizzaIcon} alt="" />
                                     </div>
                                     <div className={style.header__title}>
-                                        <div><p>REACT PIZZA</p></div>
-                                        <div>
+                                        <div className={style.header__name}>
+                                            <p>REACT PIZZA</p>
+                                            </div>
+                                        <div className={style.header__subtitle}>
                                             <span>Самая реактивная пицца</span>
                                         </div>
                                     </div>
@@ -94,25 +96,26 @@ function Content() {
 
 
 
-
-
-                                    <div className={style.info}>
-                                        <div>
-                                            <p>Всего пицц: <span>{baskets.reduce((sum, val) => sum += val.count, 0)} шт.</span></p>
+                                    <div className={style['section__summary']}>
+                                        <div className={style.info}>
+                                            <div>
+                                                <p>Всего пицц: <span>{baskets.reduce((sum, val) => sum += val.count, 0)} шт.</span></p>
+                                            </div>
+                                            <div>
+                                                <p>Сумма заказа: <span>{baskets.reduce((sum, val) => sum += val.price * val.count, 0)} ₽</span></p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p>Сумма заказа: <span>{baskets.reduce((sum, val) => sum += val.price * val.count, 0)} ₽</span></p>
+                                        <div className={style.choose}>
+                                            <div className={style.choose__back} onClick={() => navigate('/')}>
+                                                <div></div>
+                                                <p>Вернуться назад</p>
+                                            </div>
+                                            <div className={style['choose__buy-now']}>
+                                                <p>Оплатить сейчас</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className={style.choose}>
-                                        <div className={style.choose__back} onClick={() => navigate('/')}>
-                                            <div></div>
-                                            <p>Вернуться назад</p>
-                                        </div>
-                                        <div className={style['choose__buy-now']}>
-                                            <p>Оплатить сейчас</p>
-                                        </div>
-                                    </div>
+
                                 </section>
                             </div>
                         )}

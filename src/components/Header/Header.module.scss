@@ -10,8 +10,16 @@
 
     &__inner {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
+    }
+}
+
+
+@media (max-width: 590px) {
+    .header__inner {
+        gap: 20px
     }
 }
