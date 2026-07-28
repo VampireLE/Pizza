@@ -112,12 +112,6 @@ function Header({setValue}) {
         },
     ]
 
-
-    
-    // const {pizzas, setPizzas} = useContext(CountContext);
-    
-
-    // console.log(dataFilter())
     return (
         <div className={style.header}>
             <div className={style.header__wrapper}>

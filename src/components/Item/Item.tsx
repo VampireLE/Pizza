@@ -11,8 +11,6 @@ function Item({item}) {
     const [dough, setDough] = useState('тонкое');
     const [size, setSize] = useState('26 см');
     
-    const pizzas = useSelector(state => state.order.value)
-    // console.log(pizzas)
 
     return (
         <div className={style.item}>

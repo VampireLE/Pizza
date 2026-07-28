@@ -20,24 +20,37 @@
 .page {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
 .page:hover {
-    background-color: rgba(168, 167, 168, 0.248);
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 182, 25, 0.596);
+}
+
+.page:active {
+    
 }
 
 .page--active {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    user-select: none;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
-    background-color: rgb(168, 167, 168);
+    background-color: rgb(255, 182, 25);
 }
 
 .back {

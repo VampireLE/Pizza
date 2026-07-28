@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - 5173:5173
+    container_name: app
+    command: ["npm", "run", "dev"]
+    volumes:
+      - .:/app
+      - /app/node_modules
